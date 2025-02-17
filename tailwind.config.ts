@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-export default {
+const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -12,7 +12,17 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        commissioner: ["Commissioner", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+      },
+      backgroundImage: {
+        "custom-gradient":
+          "linear-gradient(90deg, rgba(29, 166, 120, 0.20) 80%, #FFFFFF 100%)",
+      },
     },
   },
   plugins: [],
-} satisfies Config;
+};
+
+export default config;
