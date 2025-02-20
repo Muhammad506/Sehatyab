@@ -3,9 +3,9 @@ import { FaFacebookF, FaTwitter, FaYoutube, FaLinkedinIn, FaEnvelope, FaMapMarke
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[rgba(29,166,120,1)] text-white py-10 px-4 sm:px-6">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-10 text-center sm:text-left">
-        
+    <footer className="bg-[rgba(29,166,120,1)] text-white py-10 px-6 sm:px-12">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8 text-center sm:text-left px-14 py-6">
+
         {/* About Section */}
         <div className="space-y-4 col-span-1 sm:col-span-2">
           <p className="text-md font-bold text-[rgba(255,255,255,0.82)] pt-6">
@@ -21,13 +21,13 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Quick Links */}
-        <div className="space-y-2">
+        <div className="space-y-2 text-left">
           <h3 className="font-bold text-xl">Quick Links</h3>
-          <div className="h-1 w-10 bg-yellow-400 mb-2 mx-auto sm:mx-0"></div>
+          <div className="h-1 w-10 bg-yellow-400 mb-2"></div>
           <ul className="space-y-2">
             {['Homepage', 'About Us', 'Our Specialist', 'Our Services', 'Our Pricing'].map((link) => (
-              <li key={link} className="flex justify-center sm:justify-start items-center space-x-2">
-                <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+              <li key={link} className="flex items-center space-x-2">
+                <svg className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M9 18l6-6-6-6" />
                 </svg>
                 <a href="#" className="hover:underline text-sm font-bold text-[rgba(255,255,255,0.82)]">{link}</a>
@@ -37,13 +37,13 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Service Links */}
-        <div className="space-y-2">
+        <div className="space-y-2 text-left">
           <h3 className="font-bold text-xl">Service Links</h3>
-          <div className="h-1 w-10 bg-yellow-400 mb-2 mx-auto sm:mx-0"></div>
+          <div className="h-1 w-10 bg-yellow-400 mb-2"></div>
           <ul className="space-y-2">
             {['Mental Health', 'Childhood', 'Adult Mentals', 'Wife Mental', 'Old Consultant'].map((service) => (
-              <li key={service} className="flex justify-center sm:justify-start items-center space-x-2">
-                <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+              <li key={service} className="flex items-center space-x-2">
+                <svg className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M9 18l6-6-6-6" />
                 </svg>
                 <a href="#" className="hover:underline text-sm font-bold text-[rgba(255,255,255,0.82)]">{service}</a>
@@ -53,19 +53,19 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Contact Section */}
-        <div className="space-y-2">
-          <h3 className="font-bold text-xl">Let's Get In Touch</h3>
-          <div className="h-1 w-10 bg-yellow-400 mb-2 mx-auto sm:mx-0"></div>
-          <p className='text-sm font-bold text-[rgba(255,255,255,0.82)]'>Open at All Day 08:00 AM – 08:00 PM</p>
-          <p className="flex justify-center sm:justify-start items-center space-x-2">
+        <div className="space-y-2 text-left">
+          <h3 className="font-bold text-xl">Let’s Get In Touch</h3>
+          <div className="h-1 w-10 bg-yellow-400 mb-2"></div>
+          <p className='text-sm font-bold text-[rgba(255,255,255,0.82)]'>Open at All Day 08:00 AM – 08:00 PM or custom time</p>
+          <p className="flex items-center space-x-2">
             <FaMapMarkerAlt className="text-yellow-400" />
             <span className='text-sm font-bold text-[rgba(255,255,255,0.82)]'>123 Main Street, Suite 101</span>
           </p>
-          <p className="flex justify-center sm:justify-start items-center space-x-2">
+          <p className="flex items-center space-x-2">
             <FaEnvelope className="text-yellow-400" />
             <span className='text-sm font-bold text-[rgba(255,255,255,0.82)]'>info@health.com</span>
           </p>
-          <p className="flex justify-center sm:justify-start items-center space-x-2">
+          <p className="flex items-center space-x-2">
             <FaPhoneAlt className="text-yellow-400" />
             <span className='text-sm font-bold text-[rgba(255,255,255,0.82)]'>(877)-444-6666</span>
           </p>

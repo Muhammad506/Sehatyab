@@ -18,21 +18,41 @@ const NavBar: React.FC = () => {
 
       {/* Desktop Nav Links */}
       <ul className="hidden lg:flex items-center space-x-8 text-white font-semibold text-sm">
-        {["HOME", "OUR SERVICES +", "BOOK APPOINTMENT", "RESOURCES +", "INSTITUTIONAL", "CONTACT US +"].map(
-          (text, index) => (
-            <li key={index} className="relative group">
-              {text.includes("+") ? (
-                <button className="hover:text-gray-200 transition duration-300">
-                  {text}
-                </button>
-              ) : (
-                <Link href={`/${text.toLowerCase().replace(/\s+/g, "")}`} className="hover:text-gray-200 transition duration-300">
-                  {text}
-                </Link>
-              )}
-            </li>
-          )
-        )}
+        <li>
+          <Link href="/" className="hover:text-gray-200 transition duration-300">
+            HOME
+          </Link>
+        </li>
+        <li>
+          <Link href="/about" className="hover:text-gray-200 transition duration-300">
+            ABOUT US
+          </Link>
+        </li>
+        <li className="relative group">
+          <button className="hover:text-gray-200 transition duration-300">
+            OUR SERVICES +
+          </button>
+        </li>
+        <li>
+          <Link href="/book-appointment" className="hover:text-gray-200 transition duration-300">
+            BOOK APPOINTMENT
+          </Link>
+        </li>
+        <li className="relative group">
+          <button className="hover:text-gray-200 transition duration-300">
+            RESOURCES +
+          </button>
+        </li>
+        <li>
+          <Link href="/institutional" className="hover:text-gray-200 transition duration-300">
+            INSTITUTIONAL
+          </Link>
+        </li>
+        <li className="relative group">
+          <button className="hover:text-gray-200 transition duration-300">
+            CONTACT US +
+          </button>
+        </li>
       </ul>
 
       {/* Search & Login (Hidden on medium and small screens) */}
@@ -58,18 +78,32 @@ const NavBar: React.FC = () => {
         ${isOpen ? "opacity-100 translate-y-0 scale-100" : "opacity-0 -translate-y-5 scale-95 pointer-events-none"}
         lg:hidden flex flex-col items-center text-white py-6 space-y-4 shadow-xl rounded-b-lg`}
       >
-        {["HOME", "OUR SERVICES +", "BOOK APPOINTMENT", "RESOURCES +", "INSTITUTIONAL", "CONTACT US +", "LOGIN"].map(
-          (text, index) => (
-            <Link
-              key={index}
-              href={`/${text.toLowerCase().replace(/\s+/g, "")}`}
-              className="hover:text-gray-200 transition font-semibold text-sm"
-              onClick={() => setIsOpen(false)}
-            >
-              {text}
-            </Link>
-          )
-        )}
+        <Link href="/" className="hover:text-gray-200 transition font-semibold text-sm" onClick={() => setIsOpen(false)}>
+          HOME
+        </Link>
+        <li>
+          <Link href="/about" className="hover:text-gray-200 transition duration-300">
+            ABOUT US
+          </Link>
+        </li>
+        <button className="hover:text-gray-200 transition font-semibold text-sm">
+          OUR SERVICES +
+        </button>
+        <Link href="/book-appointment" className="hover:text-gray-200 transition font-semibold text-sm" onClick={() => setIsOpen(false)}>
+          BOOK APPOINTMENT
+        </Link>
+        <button className="hover:text-gray-200 transition font-semibold text-sm">
+          RESOURCES +
+        </button>
+        <Link href="/institutional" className="hover:text-gray-200 transition font-semibold text-sm" onClick={() => setIsOpen(false)}>
+          INSTITUTIONAL
+        </Link>
+        <button className="hover:text-gray-200 transition font-semibold text-sm">
+          CONTACT US +
+        </button>
+        <Link href="/login" className="hover:text-gray-200 transition font-semibold text-sm" onClick={() => setIsOpen(false)}>
+          LOGIN
+        </Link>
         <FaSearch className="cursor-pointer hover:opacity-80 transition text-xl" />
       </div>
     </nav>
