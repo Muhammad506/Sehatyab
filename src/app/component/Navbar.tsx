@@ -34,7 +34,7 @@ const NavBar: React.FC = () => {
           </button>
         </li>
         <li>
-          <Link href="/book-appointment" className="hover:text-gray-200 transition duration-300">
+          <Link href="/appointment" className="hover:text-gray-200 transition duration-300">
             BOOK APPOINTMENT
           </Link>
         </li>
@@ -49,9 +49,11 @@ const NavBar: React.FC = () => {
           </Link>
         </li>
         <li className="relative group">
-          <button className="hover:text-gray-200 transition duration-300">
-            CONTACT US +
-          </button>
+          <Link href="/contact" className="hover:text-gray-200 transition duration-300">
+            <button className="hover:text-gray-200 transition duration-300">
+              CONTACT US +
+            </button>
+          </Link>
         </li>
       </ul>
 
